@@ -20,4 +20,5 @@ eureka:
       defaultZone: https://discovery-service-dev.up.railway.app/eureka/
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
+    prefer-ip-address: true
           
