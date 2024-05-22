@@ -17,6 +17,9 @@ spring:
         enabled: false
 
 eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://discovery-service-dev.up.railway.app/
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
           
