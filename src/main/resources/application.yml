@@ -10,7 +10,7 @@ spring:
        - id: deudas-microservice
          uri: lb://DEUDAS-MICROSERVICE
          predicates:
-           - Path=/api/deudas/**, /api/categorias-gasto/**
+           - Path=/api/deudas/**, /api/categorias-gasto/**,/oauth/**
 
     loadbalancer:
       ribbon:
