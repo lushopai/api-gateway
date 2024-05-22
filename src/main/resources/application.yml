@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+       - id: deudas-microservice
+         uri: lb://DEUDAS-MICROSERVICE
+         predicates:
+           - Path=/api/deudas/**, /api/categorias-gasto/**
+
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+          
